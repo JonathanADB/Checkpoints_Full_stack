@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <title>Grid 1</title>
+   
+    <style>
+    
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Merriweather', serif;
+      }
+  
+      /* Grid 1 */
+      .gridOne {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 20px;
+        border: 2px solid #ccc;
+      }
+
+      .gridOne p:nth-child(2) {
+        color: blue;
+      }
+  
+       /* Grid 2 */
+      .gridTwo {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        border: 2px solid #333;
+      }
+  
+      .gridOne p {
+        text-align: center;
+      }
+  
+      .red-div {
+        background-color: red;
+      }
+  
+      .blue-div {
+        background-color: blue;
+      }
+  
+      .yellow-div {
+        background-color: yellow;
+      }
+  
+      .gridTwo div p {
+        color: white;
+        text-align: center;
+        font-weight: bold;
+      }
+  
+      .yellow-div p {
+        color: black;
+      }
+
+      /* Grid Tres */
+      .gridThree {
+        margin: 20px;
+        display: grid;
+        grid-template-rows: 1fr 3fr;
+        width: 500px;
+        height: 300px;
+        border: 2px solid #333;
+        }
+
+        .text-section {
+            background-color: #FFB6C1;
+            padding: 15px;
+        }
+
+        .image-section {
+            background-color: #87CEFA;
+            overflow: hidden;
+        }
+
+        .image-section img {
+            width: 500px;
+            height: 225px;
+            object-fit: cover;
+        }
+
+        /* Grid 4 */
+        .gridFour {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            width: 500px;
+            background-color: green;
+            border: 2px solid #ccc;
+        }
+
+        #nestedContainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        /* Grid 5 */
+        .gridFive {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            width: 500px;
+            background-color: lightgrey;
+            margin-top: 20px;
+            border: 2px solid #ccc;
+          }
+
+          .imageContainer {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 10px;
+          }
+
+          .imageContainer img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+          }
+
+          /* Grid 6 */
+        .gridSix {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            width: 500px;
+            background-color: lightgray;
+            padding: 20px;
+            margin-top: 20px;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icon-container {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .text-content {
+            font-family: 'Roboto Slab', serif;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #34495e;
+        }
+    </style>
+
+</head>
+<body>
+
+   <!-- Grid 1 -->
+  <div class="gridOne">
+    <p>Hello World</p>
+    <p>My Fantastic Content</p>
+  </div>
+
+  <!-- Grid 2 -->
+  <div class="gridTwo">
+    <div class="red-div">
+      <p>Whatever</p>
+    </div>
+    <div class="blue-div">
+      <p>Text</p>
+    </div>
+    <div class="yellow-div">
+      <p> I want</p>
+    </div>
+  </div>
+
+  
+  <div class="gridThree">
+    <div class="text-section">
+      <p>Texto en la primera fila</p>
+    </div>
+    <div class="image-section">
+      <img src="https://picsum.photos/500/225" alt="Imagenes aleatoria">
+    </div>
+  </div>
+
+   <!-- Grid 4 -->
+  <div class="gridFour">
+    <div class="textSection">
+      <p>First row content</p>
+    </div>
+    <div id="nestedContainer">
+      <p>Nested column 1</p>
+      <p>Nested column 2</p>
+    </div>
+  </div>
+
+  <!-- Grid 5 -->
+  <div class="gridFive">
+    <div class="textSection">
+      <p>My event More aweseome text</p>
+    </div>
+    <div class="imageContainer">
+      <img src="https://picsum.photos/500/225" alt="Imagenes aleatoria">
+      <img src="https://picsum.photos/500/225" alt="Imagenes aleatoria">
+    </div>
+  </div>
+
+  <!-- Grid 6 -->
+  <div class="gridSix">
+    <div class="icon-container">
+        <i class="fa-solid fa-certificate"></i>
+    </div>
+    <p class="text-content">
+        Este es un texto de ejemplo con la fuente Google Fonts Roboto Slab. 
+        La columna de texto ocupa el triple de espacio que el icono, manteniendo 
+        una proporción 1:3 según lo solicitado.
+    </p>
+  </div>
+
+</body>
+</html>
