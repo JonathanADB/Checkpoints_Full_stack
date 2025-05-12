@@ -37,4 +37,4 @@ lista_palabra = ["banana", "manzana", "naranja", "kiwi"]
 lista_palabra.sort()
 
 #Exercise 9: Use reassignment to add an element to your tuple.
-nueva_tupla = mi_tupla + (6,)
+mi_tupla = mi_tupla + (6,)
